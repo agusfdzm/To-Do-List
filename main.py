@@ -26,6 +26,8 @@ while True:
             print("Nota vacía")
         else:
             notas.append(nota)
+            with open("notas.txt", "a", encoding="utf-8") as archivo:
+                archivo.write(nota + "\n")
             print("Nota guardada")
             input("Pulsa alguna tecla para continuar... ")
     elif opcion == 2:
